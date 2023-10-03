@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas</title>
+    <script
+      type="text/javascript"
+      src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=M82Af5w_6oh0gJS0KJOYscZYD14EpirZvE1Cau7F_TNWlAYC3HGhi3RZ9BCvx1gCoZC-hwjCEJlzQkIzCEgu8XF9uF4sPWsCqp8aNM0DNbN1p-QCY7HzkWNwqbquSrgZT6IOZYLjXOY2g3qmpvMPYUFNzPHBFiIM9Z5Du77mP0IsAH03uRUx77VASc5qObUeP35XZrDsdMafo_SkQnTW9HNCBgXzQC1tKPPVS5rt7Ps5KlGONpumpzVqD9sqWmWiuelMGe1LEGI4RT03sJZVRQ"
+      charset="UTF-8"
+    ></script>
+  </head>
+  <body>
+    <canvas
+      width="300"
+      height="300"
+      id="canvas"
+      style="border: 2px solid black"
+    ></canvas>
+  </body>
+  <script>
+    let canvas = document.getElementById("canvas"); //paper
+    let context = canvas.getContext("2d"); //pen
+
+    context.beginPath();
+    context.fillStyle = "red";
+    context.rect(0, 0, 50, 50);
+    context.fill();
+
+    context.beginPath();
+    context.fillStyle = "black";
+    context.arc(80, 30, 20, 0, 2 * Math.PI);
+    context.fill();
+
+    context.beginPath();
+    context.fillStyle = "blue";
+    context.rect(60, 60, 50, 50);
+    context.fill();
+  </script>
+</html>
